@@ -1,0 +1,13 @@
+{
+  "name": "littleroots-mobile-app",
+  "private": true,
+  "description": "LittleRoots for phones and tablets: the touch web app and the Android app",
+  "scripts": {
+    "build": "mkdir -p dist && node tools/build.mjs web/littleroots-mobile.html dist/index.html ./node_modules && cp web/manifest.webmanifest web/icon-*.png dist/",
+    "icons": "node tools/make-icons.mjs"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7"
+  }
+}
