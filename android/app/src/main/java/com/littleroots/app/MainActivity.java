@@ -20,7 +20,7 @@ import android.widget.FrameLayout;
 
 /** LittleRoots for Android phones, tablets and Android TV: shows the live LittleRoots app full screen. */
 public class MainActivity extends Activity {
-    static final String HOST = "littlerootsstudios.com";
+    static final String HOST = "app.littlerootsstudios.com";
     static final String OLD_HOST = "littleroots-api.littlerootsstudios.workers.dev";
     static final String OFFLINE = "file:///android_asset/offline.html";
 
