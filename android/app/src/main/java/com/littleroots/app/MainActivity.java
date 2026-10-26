@@ -20,7 +20,8 @@ import android.widget.FrameLayout;
 
 /** LittleRoots for Android phones, tablets and Android TV: shows the live LittleRoots app full screen. */
 public class MainActivity extends Activity {
-    static final String HOST = "littleroots-api.littlerootsstudios.workers.dev";
+    static final String HOST = "littlerootsstudios.com";
+    static final String OLD_HOST = "littleroots-api.littlerootsstudios.workers.dev";
     static final String OFFLINE = "file:///android_asset/offline.html";
 
     private WebView web;
@@ -54,7 +55,7 @@ public class MainActivity extends Activity {
                 if (!req.isForMainFrame()) return false; // video players inside the page load normally
                 Uri u = req.getUrl();
                 String h = u.getHost() == null ? "" : u.getHost();
-                if (h.equals(HOST) || "file".equals(u.getScheme()) || h.endsWith("youtube-nocookie.com") || h.endsWith("youtube.com")) return false;
+                if (h.equals(HOST) || h.endsWith("." + HOST) || h.equals(OLD_HOST) || "file".equals(u.getScheme()) || h.endsWith("youtube-nocookie.com") || h.endsWith("youtube.com")) return false;
                 try { startActivity(new Intent(Intent.ACTION_VIEW, u)); } catch (Exception e) { /* no browser */ }
                 return true; // other websites open outside the app
             }

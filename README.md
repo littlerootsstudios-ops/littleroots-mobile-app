@@ -8,10 +8,10 @@ The touch version of LittleRoots (Christian stories and songs for kids and famil
 | **Android app** | `android/` | A small native app (phones, tablets, Android TV / Google TV) that shows the phone web app full screen, turns sideways for stories, keeps the screen on while watching, and handles the Back button. On TVs it opens the TV app instead. |
 
 The library (videos, categories, featured story) comes from the LittleRoots backend and is managed on the Admin page:
-`https://littleroots-api.littlerootsstudios.workers.dev/admin/`.
+`https://littlerootsstudios.com/admin/`.
 
 ## Where it runs
-- **Phone web app:** `https://littleroots-api.littlerootsstudios.workers.dev/m/`. Phones that open the main address are sent here automatically.
+- **Phone web app:** `https://littlerootsstudios.com/m/`. Phones that open the main address are sent here automatically.
   The backend (repo `littlerootsstudios-ops/Littleroot-tv-app`) builds and serves this repo's `web/` folder; its file `mobile-app.ref` names the commit of this repo it serves. To publish a change here, update that file in the backend repo.
 - **iPhone / iPad:** open the address in Safari → Share → **Add to Home Screen**. It opens full screen with the LittleRoots icon.
 - **Android:** install `LittleRoots.apk` from the `apk` branch (built by the *Build Android app* workflow on every change to `android/`).
