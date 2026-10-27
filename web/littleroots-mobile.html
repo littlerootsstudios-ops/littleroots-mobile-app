@@ -168,8 +168,7 @@ body.on-moments .tabbar { background: rgba(0,0,0,.78); border-top-color: rgba(25
 .splash .sting { width: min(17rem, 64vw); font-size: min(1.2rem, 4.4vw); }
 .splash .tagline { margin: 0; padding-inline: 1.5rem; font-family: var(--display); font-variation-settings: "SOFT" 100; font-weight: 500; font-style: italic; font-size: clamp(1.05rem, 4.6vw, 1.6rem); line-height: 1.3; text-wrap: balance; }
 .splash .tagline span { display: inline-block; opacity: 0; animation: tag-in .7s cubic-bezier(.2,.8,.3,1) both; }
-.splash .tagline span:nth-child(1) { animation-delay: 3.5s; } .splash .tagline span:nth-child(2) { animation-delay: 3.9s; }
-.splash .tagline span:nth-child(3) { animation-delay: 4.3s; color: var(--gold-soft); }
+.splash .tagline span:nth-child(1) { animation-delay: 3.5s; } .splash .tagline span:nth-child(2) { animation-delay: 4s; color: var(--gold-soft); }
 @keyframes tag-in { from { opacity: 0; transform: translateY(.6em); } to { opacity: 1; transform: none; } }
 .logo-anim { display: block; overflow: visible; width: 100%; height: auto; }
 .logo-anim path { transform-box: fill-box; transform-origin: 50% 100%; animation: lr-pop .55s cubic-bezier(.3,1.6,.5,1) both, lr-wave 2.4s ease-in-out infinite; animation-delay: calc(var(--i) * 70ms), calc(1.1s + var(--i) * 85ms); }
@@ -1164,7 +1163,7 @@ function showBreak() {
 
 /* ---------- start ---------- */
 const LOGO_SVG = $("#topLeft").innerHTML;
-$("#splash").innerHTML = animLogo(true) + `<p class="tagline"><span>Small seeds.</span> <span>Deep roots.</span> <span>Stories for every generation.</span></p>`;
+$("#splash").innerHTML = animLogo(true) + `<p class="tagline"><span>Growing little hearts</span> <span>in God’s Word.</span></p>`;
 const splashStart = Date.now(); let splashSound = false;
 try { const ac = audioCtx(); if (ac && ac.state === "running") { playSting(); splashSound = true; } } catch (e) {}
 ["pointerdown", "touchstart", "keydown"].forEach(ev => addEventListener(ev, function joinSplash() {
